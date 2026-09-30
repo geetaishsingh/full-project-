@@ -1,0 +1,125 @@
+/* ========================
+   FEATURES SECTION — Light & Dark Theme + Responsive
+   ======================== */
+
+.features-section {
+  padding: 40px;
+
+  .card-wrapper {
+    display: grid; 
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+
+    @media (max-width: 448px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+.features-heading {
+  position: relative;
+  z-index: 20;
+  text-align: center;
+  padding: 10px 24px 50px;
+  background: var(--bg-primary);
+  transition: background 0.3s ease;
+}
+
+.mini-title {
+  color: #246b5c;
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.features-heading h2 {
+  margin-top: 10px;
+  color: var(--text-primary);
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 800;
+  letter-spacing: -1.2px;
+  line-height: 1.15;
+  transition: color 0.3s;
+}
+
+.features-heading h2 span {
+  color: #25826d;
+}
+
+.features-heading p {
+  margin-top: 10px;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 500px;
+  margin-inline: auto;
+  transition: color 0.3s;
+}
+
+.list-wrapper {
+  display: flex;
+  gap: 20px;
+  padding: 10px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.116);
+  margin: 30px 0;
+
+  .item {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    width: 33%;
+
+    .image-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 15px;
+      height: 50px;
+      width: 50px;
+    }
+
+
+    p {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+  }
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 768px) {
+  .features-heading {
+    padding: 8px 20px 40px;
+  }
+
+  .features-heading h2 {
+    font-size: clamp(24px, 6vw, 32px);
+    letter-spacing: -0.8px;
+  }
+
+  .features-heading p {
+    font-size: 14px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 480px) {
+  .features-heading {
+    padding: 4px 16px 32px;
+  }
+
+  .mini-title {
+    font-size: 11px;
+  }
+
+  .features-heading h2 {
+    font-size: clamp(22px, 7vw, 28px);
+    letter-spacing: -0.5px;
+  }
+
+  .features-heading p {
+    font-size: 13px;
+  }
+}
